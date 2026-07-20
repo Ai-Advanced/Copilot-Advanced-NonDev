@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>뉴스레터 이메일 스타터 템플릿</title>
+  <!--[if mso]>
+  <style type="text/css">
+    table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    td { mso-line-height-rule: exactly; }
+    img { -ms-interpolation-mode: bicubic; }
+  </style>
+  <![endif]-->
+  <style type="text/css">
+    /* ===== 리셋 ===== */
+    body, table, td, p, a, li, blockquote {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    table, td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    img {
+      -ms-interpolation-mode: bicubic;
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+
+    /* ===== 반응형 (모바일 600px 이하) ===== */
+    @media only screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .stack-column,
+      .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+      .stack-column-center {
+        text-align: center !important;
+      }
+      .center-on-mobile {
+        text-align: center !important;
+      }
+      .hide-on-mobile {
+        display: none !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+      }
+      .full-width-on-mobile {
+        width: 100% !important;
+      }
+      .hero-text {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
+      }
+    }
+
+    /* ===== 다크모드 ===== */
+    @media (prefers-color-scheme: dark) {
+      .dark-bg { background-color: #1a1a1a !important; }
+      .dark-card { background-color: #2a2a2a !important; }
+      .dark-text { color: #e0e0e0 !important; }
+      .dark-heading { color: #ffffff !important; }
+      .dark-footer { background-color: #111111 !important; }
+      .dark-footer-text { color: #aaaaaa !important; }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; word-break: keep-all;">
+
+  <!-- ===== 프리헤더 (받은 편지함 미리보기 텍스트) ===== -->
+  <div style="display: none; max-height: 0; overflow: hidden; font-size: 1px; color: #f4f4f4;">
+    {{preheader_text}} &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+  </div>
+
+  <!-- ===== 외부 래퍼 ===== -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+         style="background-color: #f4f4f4;">
+    <tr>
+      <td align="center" style="padding: 24px 16px;">
+
+        <!-- ===== 이메일 본체 (최대 600px) ===== -->
+        <table class="email-container dark-bg" role="presentation" width="600" cellpadding="0"
+               cellspacing="0" border="0"
+               style="background-color: #ffffff; max-width: 600px; border-radius: 8px;
+                      overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+
+
+          <!-- ============================================================
+               섹션 1. 헤더 (로고 + 네비)
+          ============================================================ -->
+          <tr>
+            <td style="background-color: #0A2E4A; padding: 20px 32px;"
+                class="dark-heading">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <!-- 로고 영역: 이미지 로고가 있으면 img 태그로 교체 -->
+                  <td style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+                              font-size: 22px; font-weight: bold; color: #ffffff;
+                              letter-spacing: 2px;">
+                    <a href="{{brand_url}}" style="color: #ffffff; text-decoration: none;">
+                      {{brand_name}}
+                    </a>
+                  </td>
+                  <!-- 네비게이션 링크 (데스크톱만) -->
+                  <td align="right" class="hide-on-mobile"
+                      style="font-family: Arial, sans-serif; font-size: 12px; color: #a0c0d8;">
+                    <a href="{{nav_products_url}}" style="color: #a0c0d8; text-decoration: none; margin-left: 16px;">제품</a>
+                    <a href="{{nav_about_url}}" style="color: #a0c0d8; text-decoration: none; margin-left: 16px;">소개</a>
+                    <a href="{{nav_support_url}}" style="color: #a0c0d8; text-decoration: none; margin-left: 16px;">고객센터</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+
+          <!-- ============================================================
+               섹션 2. 히어로 배너
+          ============================================================ -->
+          <tr>
+            <td style="padding: 0;">
+              <!-- 히어로 이미지: 실제 이미지 URL로 교체 -->
+              <img src="{{hero_image_url}}"
+                   alt="{{hero_image_alt}}"
+                   width="600"
+                   style="width: 100%; max-width: 600px; height: auto; display: block;">
+            </td>
+          </tr>
+          <!-- 히어로 텍스트 영역 -->
+          <tr>
+            <td style="background-color: #0A2E4A; padding: 32px 32px 28px; text-align: center;">
+              <h1 class="hero-text dark-heading"
+                  style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+                         font-size: 28px; font-weight: bold; color: #ffffff;
+                         margin: 0 0 12px; line-height: 1.3;">
+                {{hero_headline}}
+              </h1>
+              <p style="font-family: Arial, sans-serif; font-size: 15px; color: #a0c0d8;
+                        margin: 0 0 24px; line-height: 1.6;">
+                {{hero_subheadline}}
+              </p>
+              <!-- CTA 버튼 -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                     style="margin: 0 auto;">
+                <tr>
+                  <td style="border-radius: 4px; background-color: #E8501A;">
+                    <a href="{{hero_cta_url}}"
+                       style="display: inline-block; padding: 14px 32px;
+                              font-family: Arial, sans-serif; font-size: 15px;
+                              font-weight: bold; color: #ffffff; text-decoration: none;
+                              border-radius: 4px; border: 2px solid #E8501A;">
+                      {{hero_cta_text}}
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+
+          <!-- ============================================================
+               섹션 3. 알림 바 (이벤트/카운트다운용 — 선택)
+          ============================================================ -->
+          <tr>
+            <td style="background-color: #FFF8E8; padding: 14px 32px; text-align: center;
+                       border-top: 2px solid #FFD166; border-bottom: 2px solid #FFD166;">
+              <p style="font-family: Arial, sans-serif; font-size: 13px; color: #664400;
+                        margin: 0; line-height: 1.5;">
+                ⏰ {{alert_text}}
+              </p>
+            </td>
+          </tr>
+
+
+          <!-- ============================================================
+               섹션 4. 본문 (인사말 + 메인 텍스트)
+          ============================================================ -->
+          <tr>
+            <td class="dark-bg" style="background-color: #ffffff; padding: 32px 32px 24px;">
+              <p style="font-family: Arial, sans-serif; font-size: 15px; color: #333333;
+                        margin: 0 0 16px; line-height: 1.7;"
+                 class="dark-text">
+                안녕하세요, <strong>{{first_name}}</strong>님.
+              </p>
+              <p style="font-family: Arial, sans-serif; font-size: 15px; color: #333333;
+                        margin: 0 0 16px; line-height: 1.7;"
+                 class="dark-text">
+                {{body_paragraph_1}}
+              </p>
+              <p style="font-family: Arial, sans-serif; font-size: 15px; color: #333333;
+                        margin: 0; line-height: 1.7;"
+                 class="dark-text">
+                {{body_paragraph_2}}
+              </p>
+            </td>
+          </tr>
+
+
+          <!-- ============================================================
+               섹션 5. 3컬럼 혜택 카드
+          ============================================================ -->
+          <tr>
+            <td class="dark-bg" style="background-color: #ffffff; padding: 8px 32px 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <!-- 카드 1 -->
+                  <td class="stack-column dark-card"
+                      width="176"
+                      style="background-color: #F8F9FA; border-radius: 6px;
+                             padding: 20px 16px; text-align: center; vertical-align: top;">
+                    <img src="{{icon_1_url}}" alt="{{icon_1_alt}}" width="48" height="48"
+                         style="width: 48px; height: 48px; display: block; margin: 0 auto 12px;">
+                    <p style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;
+                               color: #0A2E4A; margin: 0 0 8px;" class="dark-heading">
+                      {{benefit_1_title}}
+                    </p>
+                    <p style="font-family: Arial, sans-serif; font-size: 13px; color: #666666;
+                               margin: 0; line-height: 1.5;" class="dark-text">
+                      {{benefit_1_desc}}
+                    </p>
+                  </td>
+                  <!-- 카드 간격 -->
+                  <td width="16" style="font-size: 0; line-height: 0;">&nbsp;</td>
+                  <!-- 카드 2 -->
+                  <td class="stack-column dark-card"
+                      width="176"
+                      style="background-color: #F8F9FA; border-radius: 6px;
+                             padding: 20px 16px; text-align: center; vertical-align: top;">
+                    <img src="{{icon_2_url}}" alt="{{icon_2_alt}}" width="48" height="48"
+                         style="width: 48px; height: 48px; display: block; margin: 0 auto 12px;">
+                    <p style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;
+                               color: #0A2E4A; margin: 0 0 8px;" class="dark-heading">
+                      {{benefit_2_title}}
+                    </p>
+                    <p style="font-family: Arial, sans-serif; font-size: 13px; color: #666666;
+                               margin: 0; line-height: 1.5;" class="dark-text">
+                      {{benefit_2_desc}}
+                    </p>
+                  </td>
+                  <!-- 카드 간격 -->
+                  <td width="16" style="font-size: 0; line-height: 0;">&nbsp;</td>
+                  <!-- 카드 3 -->
+                  <td class="stack-column dark-card"
+                      width="176"
+                      style="background-color: #F8F9FA; border-radius: 6px;
+                             padding: 20px 16px; text-align: center; vertical-align: top;">
+                    <img src="{{icon_3_url}}" alt="{{icon_3_alt}}" width="48" height="48"
+                         style="width: 48px; height: 48px; display: block; margin: 0 auto 12px;">
+                    <p style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold;
+                               color: #0A2E4A; margin: 0 0 8px;" class="dark-heading">
+                      {{benefit_3_title}}
+                    </p>
+                    <p style="font-family: Arial, sans-serif; font-size: 13px; color: #666666;
+                               margin: 0; line-height: 1.5;" class="dark-text">
+                      {{benefit_3_desc}}
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+
+          <!-- ============================================================
+               섹션 6. 제품 하이라이트 (이미지 좌 + 텍스트 우)
+          ============================================================ -->
+          <tr>
+            <td class="dark-bg" style="background-color: #ffffff; padding: 0 32px 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <!-- 제품 이미지 -->
+                  <td class="stack-column-center" width="260" style="vertical-align: middle;">
+                    <img src="{{product_image_url}}" alt="{{product_name}}"
+                         width="260" style="width: 100%; max-width: 260px; height: auto; display: block;">
+                  </td>
+                  <!-- 간격 -->
+                  <td width="24" style="font-size: 0;">&nbsp;</td>
+                  <!-- 제품 정보 -->
+                  <td class="stack-column" style="vertical-align: middle; padding: 16px 0;">
+                    <h2 style="font-family: Arial, sans-serif; font-size: 20px; font-weight: bold;
+                                color: #0A2E4A; margin: 0 0 12px;" class="dark-heading">
+                      {{product_name}}
+                    </h2>
+                    <ul style="font-family: Arial, sans-serif; font-size: 14px; color: #444444;
+                                padding-left: 18px; margin: 0 0 16px; line-height: 1.8;"
+                        class="dark-text">
+                      <li>{{product_feature_1}}</li>
+                      <li>{{product_feature_2}}</li>
+                      <li>{{product_feature_3}}</li>
+                    </ul>
+                    <!-- 가격 -->
+                    <p style="font-family: Arial, sans-serif; margin: 0 0 16px;">
+                      <span style="font-size: 14px; color: #999999; text-decoration: line-through;">
+                        {{original_price}}
+                      </span>
+                      &nbsp;
+                      <span style="font-size: 22px; font-weight: bold; color: #E84040;">
+                        {{sale_price}}
+                      </span>
+                    </p>
+                    <!-- CTA 버튼 -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="border-radius: 4px; background-color: #E8501A;">
+                          <a href="{{product_cta_url}}"
+                             style="display: inline-block; padding: 12px 24px;
+                                    font-family: Arial, sans-serif; font-size: 14px;
+                                    font-weight: bold; color: #ffffff; text-decoration: none;
+                                    border-radius: 4px;">
+                            {{product_cta_text}}
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+
+          <!-- ============================================================
+               섹션 7. 최종 CTA 배너
+          ============================================================ -->
+          <tr>
+            <td style="background-color: #0A2E4A; padding: 40px 32px; text-align: center;">
+              <h2 style="font-family: Arial, sans-serif; font-size: 22px; font-weight: bold;
+                          color: #ffffff; margin: 0 0 12px; line-height: 1.3;">
+                {{final_cta_headline}}
+              </h2>
+              <p style="font-family: Arial, sans-serif; font-size: 14px; color: #a0c0d8;
+                        margin: 0 0 24px; line-height: 1.6;">
+                {{final_cta_subtext}}
+              </p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                     style="margin: 0 auto;">
+                <tr>
+                  <td style="border-radius: 4px; background-color: #E8501A;">
+                    <a href="{{final_cta_url}}"
+                       style="display: inline-block; padding: 16px 40px;
+                              font-family: Arial, sans-serif; font-size: 16px;
+                              font-weight: bold; color: #ffffff; text-decoration: none;
+                              border-radius: 4px; border: 2px solid #E8501A;">
+                      {{final_cta_button_text}}
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+
+          <!-- ============================================================
+               섹션 8. 푸터 (법적 필수 항목 포함)
+          ============================================================ -->
+          <tr>
+            <td class="dark-footer"
+                style="background-color: #f0f0f0; padding: 24px 32px; text-align: center;">
+
+              <!-- SNS 링크 -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                     style="margin: 0 auto 16px;">
+                <tr>
+                  <td style="padding: 0 8px;">
+                    <a href="{{sns_instagram_url}}"
+                       style="font-family: Arial, sans-serif; font-size: 12px;
+                              color: #666666; text-decoration: none;"
+                       class="dark-footer-text">Instagram</a>
+                  </td>
+                  <td style="padding: 0 8px; color: #cccccc;">|</td>
+                  <td style="padding: 0 8px;">
+                    <a href="{{sns_youtube_url}}"
+                       style="font-family: Arial, sans-serif; font-size: 12px;
+                              color: #666666; text-decoration: none;"
+                       class="dark-footer-text">YouTube</a>
+                  </td>
+                  <td style="padding: 0 8px; color: #cccccc;">|</td>
+                  <td style="padding: 0 8px;">
+                    <a href="{{sns_blog_url}}"
+                       style="font-family: Arial, sans-serif; font-size: 12px;
+                              color: #666666; text-decoration: none;"
+                       class="dark-footer-text">Blog</a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- 회사 정보 -->
+              <p style="font-family: Arial, sans-serif; font-size: 11px; color: #888888;
+                        margin: 0 0 8px; line-height: 1.6;" class="dark-footer-text">
+                {{company_name}} · {{company_address}}<br>
+                대표: {{ceo_name}} · 사업자등록번호: {{business_number}}
+              </p>
+
+              <!-- 수신거부 (법적 필수 — 정보통신망법 제50조) -->
+              <p style="font-family: Arial, sans-serif; font-size: 11px; color: #888888;
+                        margin: 0 0 8px; line-height: 1.6;" class="dark-footer-text">
+                본 메일은 광고성 정보를 포함하고 있습니다.<br>
+                수신을 원하지 않으시면
+                <a href="{{unsubscribe_url}}"
+                   style="color: #888888; text-decoration: underline;">
+                  수신거부
+                </a>를 클릭해 주세요. 수신거부는 무료입니다.
+              </p>
+
+              <!-- 저작권 -->
+              <p style="font-family: Arial, sans-serif; font-size: 11px; color: #aaaaaa;
+                        margin: 0;" class="dark-footer-text">
+                &copy; 2026 {{brand_name}}. All rights reserved.
+              </p>
+
+            </td>
+          </tr>
+
+
+        </table>
+        <!-- /이메일 본체 -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- /외부 래퍼 -->
+
+</body>
+</html>
+
+<!--
+================================================================================
+ 교체 필요 항목 체크리스트 ({{변수명}} 전체 목록)
+================================================================================
+
+[ ] {{preheader_text}}       — 받은 편지함 미리보기 텍스트 (50자 이내 권장)
+[ ] {{brand_url}}            — 브랜드 홈페이지 URL
+[ ] {{brand_name}}           — 브랜드명 (예: TimeX)
+[ ] {{nav_products_url}}     — 네비 "제품" 링크 URL
+[ ] {{nav_about_url}}        — 네비 "소개" 링크 URL
+[ ] {{nav_support_url}}      — 네비 "고객센터" 링크 URL
+[ ] {{hero_image_url}}       — 히어로 배너 이미지 URL (600×280px 권장)
+[ ] {{hero_image_alt}}       — 히어로 이미지 대체 텍스트
+[ ] {{hero_headline}}        — 히어로 메인 헤드라인
+[ ] {{hero_subheadline}}     — 히어로 서브 헤드라인
+[ ] {{hero_cta_url}}         — 히어로 CTA 버튼 링크
+[ ] {{hero_cta_text}}        — 히어로 CTA 버튼 텍스트 (예: 지금 구매하기)
+[ ] {{alert_text}}           — 알림 바 텍스트 (예: 여름 세일 D-11)
+[ ] {{first_name}}           — 수신자 이름 (개인화용)
+[ ] {{body_paragraph_1}}     — 본문 첫 번째 문단
+[ ] {{body_paragraph_2}}     — 본문 두 번째 문단
+[ ] {{icon_1_url}}           — 혜택 카드 1 아이콘 이미지 URL (48×48px)
+[ ] {{icon_1_alt}}           — 혜택 카드 1 아이콘 대체 텍스트
+[ ] {{benefit_1_title}}      — 혜택 카드 1 제목
+[ ] {{benefit_1_desc}}       — 혜택 카드 1 설명
+[ ] {{icon_2_url}}           — 혜택 카드 2 아이콘 URL
+[ ] {{icon_2_alt}}           — 혜택 카드 2 아이콘 대체 텍스트
+[ ] {{benefit_2_title}}      — 혜택 카드 2 제목
+[ ] {{benefit_2_desc}}       — 혜택 카드 2 설명
+[ ] {{icon_3_url}}           — 혜택 카드 3 아이콘 URL
+[ ] {{icon_3_alt}}           — 혜택 카드 3 아이콘 대체 텍스트
+[ ] {{benefit_3_title}}      — 혜택 카드 3 제목
+[ ] {{benefit_3_desc}}       — 혜택 카드 3 설명
+[ ] {{product_image_url}}    — 제품 이미지 URL (260×260px 권장)
+[ ] {{product_name}}         — 제품명
+[ ] {{product_feature_1}}    — 제품 특징 1
+[ ] {{product_feature_2}}    — 제품 특징 2
+[ ] {{product_feature_3}}    — 제품 특징 3
+[ ] {{original_price}}       — 정가 (예: 199,000원)
+[ ] {{sale_price}}           — 할인가 (예: 159,200원)
+[ ] {{product_cta_url}}      — 제품 CTA 버튼 링크
+[ ] {{product_cta_text}}     — 제품 CTA 버튼 텍스트
+[ ] {{final_cta_headline}}   — 최종 CTA 헤드라인
+[ ] {{final_cta_subtext}}    — 최종 CTA 서브 텍스트
+[ ] {{final_cta_url}}        — 최종 CTA 버튼 링크
+[ ] {{final_cta_button_text}}— 최종 CTA 버튼 텍스트
+[ ] {{sns_instagram_url}}    — 인스타그램 URL
+[ ] {{sns_youtube_url}}      — 유튜브 URL
+[ ] {{sns_blog_url}}         — 블로그 URL
+[ ] {{company_name}}         — 회사명
+[ ] {{company_address}}      — 회사 주소
+[ ] {{ceo_name}}             — 대표자명
+[ ] {{business_number}}      — 사업자등록번호
+[ ] {{unsubscribe_url}}      — 수신거부 URL (법적 필수)
+
+================================================================================
+ Copilot 커스터마이즈 프롬프트
+================================================================================
+
+이 템플릿을 커스터마이즈할 때 Copilot Chat에:
+
+"위 newsletter-email.html 템플릿을 다음 캠페인에 맞게 수정해줘:
+- 브랜드: [브랜드명], 색상: [색상코드]
+- 이벤트: [이벤트명]
+- 제품: [제품명]
+- 변경할 섹션: [섹션명]"
+================================================================================
+-->

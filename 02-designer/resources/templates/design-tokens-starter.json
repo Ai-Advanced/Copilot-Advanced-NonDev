@@ -1,0 +1,218 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "$metadata": {
+    "name": "Design Tokens Starter",
+    "version": "1.0.0",
+    "description": "W3C DTCG 스타일 디자인 토큰 시작 템플릿. [대괄호] 안의 값을 실제 브랜드 값으로 교체하세요."
+  },
+
+  "color": {
+    "primary": {
+      "50":  { "$type": "color", "$value": "#EFF6FF", "$description": "가장 연한 Primary — 배경, hover 상태" },
+      "100": { "$type": "color", "$value": "#DBEAFE" },
+      "200": { "$type": "color", "$value": "#BFDBFE" },
+      "300": { "$type": "color", "$value": "#93C5FD" },
+      "400": { "$type": "color", "$value": "#60A5FA" },
+      "500": { "$type": "color", "$value": "#2563EB", "$description": "기준 Primary 색상. 이 값을 브랜드 컬러로 교체하세요." },
+      "600": { "$type": "color", "$value": "#1D4ED8" },
+      "700": { "$type": "color", "$value": "#1E40AF" },
+      "800": { "$type": "color", "$value": "#1E3A8A" },
+      "900": { "$type": "color", "$value": "#1E3A5F" }
+    },
+
+    "secondary": {
+      "50":  { "$type": "color", "$value": "#F5F3FF" },
+      "100": { "$type": "color", "$value": "#EDE9FE" },
+      "200": { "$type": "color", "$value": "#DDD6FE" },
+      "300": { "$type": "color", "$value": "#C4B5FD" },
+      "400": { "$type": "color", "$value": "#A78BFA" },
+      "500": { "$type": "color", "$value": "#7C3AED", "$description": "기준 Secondary 색상" },
+      "600": { "$type": "color", "$value": "#6D28D9" },
+      "700": { "$type": "color", "$value": "#5B21B6" },
+      "800": { "$type": "color", "$value": "#4C1D95" },
+      "900": { "$type": "color", "$value": "#3B0764" }
+    },
+
+    "neutral": {
+      "50":  { "$type": "color", "$value": "#F9FAFB" },
+      "100": { "$type": "color", "$value": "#F3F4F6" },
+      "200": { "$type": "color", "$value": "#E5E7EB" },
+      "300": { "$type": "color", "$value": "#D1D5DB" },
+      "400": { "$type": "color", "$value": "#9CA3AF" },
+      "500": { "$type": "color", "$value": "#6B7280" },
+      "600": { "$type": "color", "$value": "#4B5563" },
+      "700": { "$type": "color", "$value": "#374151" },
+      "800": { "$type": "color", "$value": "#1F2937" },
+      "900": { "$type": "color", "$value": "#111827" }
+    },
+
+    "success": {
+      "100": { "$type": "color", "$value": "#DCFCE7" },
+      "300": { "$type": "color", "$value": "#86EFAC" },
+      "500": { "$type": "color", "$value": "#22C55E", "$description": "기준 Success 색상" },
+      "700": { "$type": "color", "$value": "#15803D" }
+    },
+
+    "warning": {
+      "100": { "$type": "color", "$value": "#FEF9C3" },
+      "300": { "$type": "color", "$value": "#FDE047" },
+      "500": { "$type": "color", "$value": "#EAB308", "$description": "기준 Warning 색상" },
+      "700": { "$type": "color", "$value": "#A16207" }
+    },
+
+    "error": {
+      "100": { "$type": "color", "$value": "#FEE2E2" },
+      "300": { "$type": "color", "$value": "#FCA5A5" },
+      "500": { "$type": "color", "$value": "#EF4444", "$description": "기준 Error 색상" },
+      "700": { "$type": "color", "$value": "#B91C1C" }
+    },
+
+    "semantic": {
+      "$description": "시맨틱 토큰: 역할 기반. 다크모드 전환 시 이 계층만 교체.",
+
+      "text": {
+        "primary":   { "$type": "color", "$value": "{color.neutral.900}", "$description": "주요 본문 텍스트" },
+        "secondary": { "$type": "color", "$value": "{color.neutral.600}", "$description": "보조 텍스트, 설명" },
+        "disabled":  { "$type": "color", "$value": "{color.neutral.400}", "$description": "비활성화 텍스트" },
+        "inverse":   { "$type": "color", "$value": "#FFFFFF",             "$description": "어두운 배경 위 텍스트" },
+        "error":     { "$type": "color", "$value": "{color.error.700}",   "$description": "에러 메시지" },
+        "success":   { "$type": "color", "$value": "{color.success.700}", "$description": "성공 메시지" }
+      },
+
+      "bg": {
+        "default":   { "$type": "color", "$value": "#FFFFFF",              "$description": "기본 페이지 배경" },
+        "subtle":    { "$type": "color", "$value": "{color.neutral.50}",   "$description": "약간 어두운 배경 (사이드바 등)" },
+        "emphasis":  { "$type": "color", "$value": "{color.neutral.900}",  "$description": "강조 배경 (토스트 등)" },
+        "brand":     { "$type": "color", "$value": "{color.primary.500}",  "$description": "브랜드 배경" },
+        "brand-subtle": { "$type": "color", "$value": "{color.primary.50}", "$description": "브랜드 연한 배경" }
+      },
+
+      "border": {
+        "default":   { "$type": "color", "$value": "{color.neutral.200}", "$description": "기본 테두리" },
+        "strong":    { "$type": "color", "$value": "{color.neutral.400}", "$description": "강조 테두리" },
+        "brand":     { "$type": "color", "$value": "{color.primary.500}", "$description": "브랜드 테두리" },
+        "error":     { "$type": "color", "$value": "{color.error.500}",   "$description": "에러 테두리" }
+      },
+
+      "brand": {
+        "default":  { "$type": "color", "$value": "{color.primary.500}" },
+        "hover":    { "$type": "color", "$value": "{color.primary.600}" },
+        "active":   { "$type": "color", "$value": "{color.primary.700}" },
+        "subtle":   { "$type": "color", "$value": "{color.primary.50}"  },
+        "text":     { "$type": "color", "$value": "{color.primary.700}" }
+      },
+
+      "feedback": {
+        "success-bg":     { "$type": "color", "$value": "{color.success.100}" },
+        "success-text":   { "$type": "color", "$value": "{color.success.700}" },
+        "success-border": { "$type": "color", "$value": "{color.success.300}" },
+        "warning-bg":     { "$type": "color", "$value": "{color.warning.100}" },
+        "warning-text":   { "$type": "color", "$value": "{color.warning.700}" },
+        "warning-border": { "$type": "color", "$value": "{color.warning.300}" },
+        "error-bg":       { "$type": "color", "$value": "{color.error.100}"   },
+        "error-text":     { "$type": "color", "$value": "{color.error.700}"   },
+        "error-border":   { "$type": "color", "$value": "{color.error.300}"   }
+      }
+    }
+  },
+
+  "typography": {
+    "fontFamily": {
+      "sans": { "$type": "fontFamily", "$value": "Pretendard, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" },
+      "mono": { "$type": "fontFamily", "$value": "JetBrains Mono, 'Courier New', Courier, monospace" }
+    },
+
+    "fontSize": {
+      "xs":   { "$type": "dimension", "$value": "12px" },
+      "sm":   { "$type": "dimension", "$value": "14px" },
+      "base": { "$type": "dimension", "$value": "16px", "$description": "기본 폰트 크기" },
+      "lg":   { "$type": "dimension", "$value": "18px" },
+      "xl":   { "$type": "dimension", "$value": "20px" },
+      "2xl":  { "$type": "dimension", "$value": "24px" },
+      "3xl":  { "$type": "dimension", "$value": "30px" },
+      "4xl":  { "$type": "dimension", "$value": "36px" },
+      "5xl":  { "$type": "dimension", "$value": "48px" }
+    },
+
+    "fontWeight": {
+      "regular":  { "$type": "fontWeight", "$value": 400 },
+      "medium":   { "$type": "fontWeight", "$value": 500 },
+      "semibold": { "$type": "fontWeight", "$value": 600 },
+      "bold":     { "$type": "fontWeight", "$value": 700 }
+    },
+
+    "lineHeight": {
+      "tight":   { "$type": "dimension", "$value": "1.2"   },
+      "snug":    { "$type": "dimension", "$value": "1.35"  },
+      "normal":  { "$type": "dimension", "$value": "1.5"   },
+      "relaxed": { "$type": "dimension", "$value": "1.625" },
+      "loose":   { "$type": "dimension", "$value": "2"     }
+    },
+
+    "letterSpacing": {
+      "tighter": { "$type": "dimension", "$value": "-0.05em" },
+      "tight":   { "$type": "dimension", "$value": "-0.025em" },
+      "normal":  { "$type": "dimension", "$value": "0em"      },
+      "wide":    { "$type": "dimension", "$value": "0.025em"  },
+      "wider":   { "$type": "dimension", "$value": "0.05em"   },
+      "widest":  { "$type": "dimension", "$value": "0.1em"    }
+    }
+  },
+
+  "spacing": {
+    "$description": "4px 배수 간격 시스템",
+    "0":  { "$type": "dimension", "$value": "0px"  },
+    "1":  { "$type": "dimension", "$value": "4px"  },
+    "2":  { "$type": "dimension", "$value": "8px"  },
+    "3":  { "$type": "dimension", "$value": "12px" },
+    "4":  { "$type": "dimension", "$value": "16px" },
+    "5":  { "$type": "dimension", "$value": "20px" },
+    "6":  { "$type": "dimension", "$value": "24px" },
+    "8":  { "$type": "dimension", "$value": "32px" },
+    "10": { "$type": "dimension", "$value": "40px" },
+    "12": { "$type": "dimension", "$value": "48px" },
+    "16": { "$type": "dimension", "$value": "64px" },
+    "20": { "$type": "dimension", "$value": "80px" },
+    "24": { "$type": "dimension", "$value": "96px" }
+  },
+
+  "borderRadius": {
+    "none": { "$type": "dimension", "$value": "0px"    },
+    "sm":   { "$type": "dimension", "$value": "4px"    },
+    "md":   { "$type": "dimension", "$value": "8px"    },
+    "lg":   { "$type": "dimension", "$value": "12px"   },
+    "xl":   { "$type": "dimension", "$value": "16px"   },
+    "2xl":  { "$type": "dimension", "$value": "24px"   },
+    "3xl":  { "$type": "dimension", "$value": "32px"   },
+    "full": { "$type": "dimension", "$value": "9999px", "$description": "원형 또는 pill 모양" }
+  },
+
+  "borderWidth": {
+    "thin":   { "$type": "dimension", "$value": "1px" },
+    "medium": { "$type": "dimension", "$value": "2px" },
+    "thick":  { "$type": "dimension", "$value": "4px" }
+  },
+
+  "shadow": {
+    "sm":  { "$type": "shadow", "$value": { "x": "0", "y": "1px", "blur": "2px",  "spread": "0",   "color": "rgba(0,0,0,0.05)" } },
+    "md":  { "$type": "shadow", "$value": { "x": "0", "y": "1px", "blur": "3px",  "spread": "0",   "color": "rgba(0,0,0,0.1)"  } },
+    "lg":  { "$type": "shadow", "$value": { "x": "0", "y": "4px", "blur": "6px",  "spread": "-1px","color": "rgba(0,0,0,0.1)"  } },
+    "xl":  { "$type": "shadow", "$value": { "x": "0", "y": "10px","blur": "15px", "spread": "-3px","color": "rgba(0,0,0,0.1)"  } },
+    "2xl": { "$type": "shadow", "$value": { "x": "0", "y": "25px","blur": "50px", "spread": "-12px","color": "rgba(0,0,0,0.25)"} }
+  },
+
+  "animation": {
+    "duration": {
+      "fast":     { "$type": "duration", "$value": "100ms" },
+      "normal":   { "$type": "duration", "$value": "200ms" },
+      "slow":     { "$type": "duration", "$value": "300ms" },
+      "slower":   { "$type": "duration", "$value": "500ms" }
+    },
+    "easing": {
+      "ease-out":  { "$type": "cubicBezier", "$value": [0, 0, 0.2, 1]     },
+      "ease-in":   { "$type": "cubicBezier", "$value": [0.4, 0, 1, 1]     },
+      "ease":      { "$type": "cubicBezier", "$value": [0.4, 0, 0.2, 1]   },
+      "spring":    { "$type": "cubicBezier", "$value": [0.16, 1, 0.3, 1]  }
+    }
+  }
+}

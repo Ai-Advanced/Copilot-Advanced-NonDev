@@ -3,6 +3,88 @@
 > **비개발자를 위한 GitHub Copilot 실무 활용 커리큘럼**
 > 직군별 2일 심화 과정 · 각 6~8시간 · 한국어
 
+## 전체 교육 flow
+
+**공통 기초를 먼저 이수한 뒤, 8개 직군 중 자신의 업무에 맞는 한 과정을 선택**합니다.
+8개 직군을 모두 순서대로 수강하는 과정이 아닙니다.
+
+### 1. 공통 기초 → 직군 선택
+
+```mermaid
+---
+config:
+  theme: neutral
+  flowchart:
+    wrappingWidth: 320
+---
+flowchart LR
+    Basics["공통 기초 · 00-basics<br/>Copilot 이해 → 설치 → 기본 사용<br/>프롬프트 기초 → 파일 형식"]
+    Role{"내 직군 선택"}
+    PM["기획 / PM<br/>PRD · 사용자 스토리"]
+    Design["디자이너<br/>디자인 토큰 · 프로토타입"]
+    Marketing["마케터<br/>이메일 HTML · 데이터 리포트"]
+    Sales["영업 / CS<br/>제안서 · CRM 자동화"]
+    HR["HR / 인사<br/>JD · 온보딩 문서"]
+    Finance["재무 / 회계<br/>엑셀 · 월결산 자동화"]
+    Office["일반 오피스<br/>이메일 · PPT 초안 · 매크로"]
+    Data["데이터 분석<br/>SQL · pandas · 시각화"]
+    Course["선택한 직군의 2일 과정<br/>Day 1 → Day 2"]
+
+    Basics --> Role
+    Role --> PM & Design & Marketing & Sales & HR & Finance & Office & Data
+    PM & Design & Marketing & Sales & HR & Finance & Office & Data --> Course
+
+    classDef step fill:#eaf6f0,stroke:#15745b,color:#162b46
+    classDef gate fill:#fbf4e7,stroke:#926020,color:#162b46
+    class Basics,PM,Design,Marketing,Sales,HR,Finance,Office,Data,Course step
+    class Role gate
+```
+
+시작하기: [공통 기초 5개 문서](00-basics/README.md) · [직군별 폴더와 결과물](#커리큘럼-지도)
+
+### 2. 선택한 직군의 Day 1 → Day 2 → 업무 적용
+
+아래는 모든 직군이 공유하는 학습 구조입니다. 실제 시나리오·고급 활용 주제는 각 직군의 README와 `day1/`, `day2/` 문서에서 확인하세요.
+
+```mermaid
+---
+config:
+  theme: neutral
+  flowchart:
+    wrappingWidth: 320
+---
+flowchart TD
+    subgraph Day1["Day 1 · 업무별 기본 활용"]
+        D1["1. 직군별 Copilot 활용 개요"]
+        D2["2. 실전 시나리오 A"]
+        D3["3. 실전 시나리오 B"]
+        D4["4. Day 1 종합 실습"]
+        D1 --> D2 --> D3 --> D4
+    end
+    subgraph Day2["Day 2 · 고급 활용과 종합 프로젝트"]
+        D5["5. 고급 시나리오 A"]
+        D6["6. 고급 시나리오 B"]
+        D7["7. 직군별 워크플로우 심화<br/>자동화 · 프로토타입 등"]
+        D8["8. 캡스톤 프로젝트<br/>실제 업무의 처음부터 끝까지"]
+        D5 --> D6 --> D7 --> D8
+    end
+    Check{"결과가 업무 요구와<br/>검증 기준에 맞는가?"}
+    Improve["프롬프트 · 입력 데이터 · 산출물 보완"]
+    Apply["업무 적용<br/>검증된 결과물 · 프롬프트 · 템플릿 재사용"]
+
+    D4 --> D5
+    D8 --> Check
+    Check -->|보완 필요| Improve --> D8
+    Check -->|충족| Apply
+
+    classDef step fill:#eaf6f0,stroke:#15745b,color:#162b46
+    classDef gate fill:#fbf4e7,stroke:#926020,color:#162b46
+    classDef result fill:#edf3ff,stroke:#285bd4,color:#162b46
+    class D1,D2,D3,D4,D5,D6,D7,D8,Improve step
+    class Check gate
+    class Apply result
+```
+
 ---
 
 ## 이 커리큘럼이 필요한 이유

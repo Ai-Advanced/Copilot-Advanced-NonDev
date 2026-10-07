@@ -5,10 +5,61 @@
 
 ## 전체 교육 flow
 
+[초급 교육 참고 흐름](#basic-curriculum-flow) · [직군별 2일 심화 흐름](#role-curriculum-flow)
+
+<a id="basic-curriculum-flow"></a>
+
+### 초급 교육 참고 흐름
+
+교육 제안서의 초급 트랙은 **Copilot 이해 → 활용 모드 → 프롬프트 → 업무 적용** 순서로 진행합니다.
+초급 전용 저장소와 구분하여, 이 저장소의 [`00-basics/`](00-basics/README.md)를 설치·기본 사용·프롬프트의 **공통 참고 자료**로 연결합니다.
+기존 공통 기초 교재는 비개발자 관점의 **Tab · Chat · Inline Chat** 중심이며, 아래 흐름에 있는 **Edit · Agent 모드의 전용 실습 교재는 포함하지 않습니다.**
+
+```mermaid
+---
+config:
+  theme: neutral
+  flowchart:
+    wrappingWidth: 320
+---
+flowchart TD
+    B1["1. Copilot 이해<br/>기본 개념 · 동작 원리 · 요금제"]
+    Setup["실습 준비<br/>설치 · 로그인 · 첫 응답 확인"]
+    B2["2. 활용 모드 이해<br/>Chat · Inline · Edit · Agent"]
+    B3["3. 프롬프트 기초<br/>목적 · 맥락 · 출력 형식 명시"]
+    B4["4. 업무 적용 실습<br/>문서 · 데이터 · 간단한 코드 작성"]
+    Review{"결과가 요구사항에 맞고<br/>정확한가?"}
+    Improve["입력 정보 · 프롬프트 보완"]
+    Done["검증된 결과물 완성<br/>업무에 맞춰 중급 또는 직군별 과정 선택"]
+
+    B1 --> Setup --> B2 --> B3 --> B4 --> Review
+    Review -->|보완 필요| Improve --> B3
+    Review -->|충족| Done
+
+    classDef step fill:#edf3ff,stroke:#285bd4,color:#162b46
+    classDef gate fill:#fbf4e7,stroke:#926020,color:#162b46
+    classDef result fill:#eaf6f0,stroke:#15745b,color:#162b46
+    class B1,Setup,B2,B3,B4,Improve step
+    class Review gate
+    class Done result
+```
+
+| 공통 참고 자료 | 연결되는 학습 내용 |
+|---|---|
+| [Copilot 개요](00-basics/01-copilot-overview.md) | 기본 개념 · 업무 활용 예시 |
+| [설치와 첫 실행](00-basics/02-installation.md) | 실습 환경 준비 |
+| [기본 사용법](00-basics/03-basic-usage.md) | Tab · Chat · Inline Chat |
+| [프롬프트 기초](00-basics/04-prompt-basics.md) | 좋은 질문 · 3S 원칙 |
+| [업무 파일 형식](00-basics/05-file-types-nondev.md) | Markdown · CSV · JSON · SQL 등 |
+
+<a id="role-curriculum-flow"></a>
+
+### 직군별 2일 심화 흐름
+
 **공통 기초를 먼저 이수한 뒤, 8개 직군 중 자신의 업무에 맞는 한 과정을 선택**합니다.
 8개 직군을 모두 순서대로 수강하는 과정이 아닙니다.
 
-### 1. 공통 기초 → 직군 선택
+#### 1. 공통 기초 → 직군 선택
 
 ```mermaid
 ---
@@ -42,7 +93,7 @@ flowchart LR
 
 시작하기: [공통 기초 5개 문서](00-basics/README.md) · [직군별 폴더와 결과물](#커리큘럼-지도)
 
-### 2. 선택한 직군의 Day 1 → Day 2 → 업무 적용
+#### 2. 선택한 직군의 Day 1 → Day 2 → 업무 적용
 
 아래는 모든 직군이 공유하는 학습 구조입니다. 실제 시나리오·고급 활용 주제는 각 직군의 README와 `day1/`, `day2/` 문서에서 확인하세요.
 

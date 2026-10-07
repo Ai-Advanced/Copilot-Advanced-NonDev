@@ -1,5 +1,7 @@
 # 기획 / PM — GitHub Copilot 2일 심화 과정
 
+**과정 후 추가 실습:** [Copilot CLI로 프로토타입을 Azure에 배포](../09-azure-capstone/README.md) · [직군별 요구사항](../09-azure-capstone/roles.md). 기존 2일 과정 외 별도 편성입니다.
+
 > **대상**: 프로덕트 매니저, 서비스 기획자, 프로덕트 오너, IT 기획팀
 > **기간**: 2일 (각 3~4시간, 총 6~8시간)
 > **선행 조건**: [00-basics/](../00-basics/) 5개 문서 완료

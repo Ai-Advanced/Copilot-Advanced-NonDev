@@ -1,7 +1,7 @@
 # Copilot for Non-Developers
 
 > **비개발자를 위한 GitHub Copilot 실무 활용 커리큘럼**
-> 직군별 2일 심화 과정 · 각 6~8시간 · 한국어
+> 직군별 2일 심화 과정 · 각 6~8시간 + Azure 배포 캡스톤 별도 편성 · 한국어
 
 ## 전체 교육 flow
 
@@ -93,7 +93,7 @@ flowchart LR
 
 시작하기: [공통 기초 5개 문서](00-basics/README.md) · [직군별 폴더와 결과물](#커리큘럼-지도)
 
-#### 2. 선택한 직군의 Day 1 → Day 2 → 업무 적용
+#### 2. 선택한 직군의 Day 1 → Day 2 → Azure 배포 → 업무 적용
 
 아래는 모든 직군이 공유하는 학습 구조입니다. 실제 시나리오·고급 활용 주제는 각 직군의 README와 `day1/`, `day2/` 문서에서 확인하세요.
 
@@ -122,19 +122,31 @@ flowchart TD
     Check{"결과가 업무 요구와<br/>검증 기준에 맞는가?"}
     Improve["프롬프트 · 입력 데이터 · 산출물 보완"]
     Apply["업무 적용<br/>검증된 결과물 · 프롬프트 · 템플릿 재사용"]
+    Web["추가 캡스톤 · Copilot CLI<br/>기존 산출물을 웹으로 완성"]
+    Deploy["공개 범위·배포 파일 검토 후<br/>Azure Static Web Apps에 승인 배포"]
+    Verify{"Azure URL에서 기능 동작?"}
+    Retry["원인 분석 · 로컬 수정"]
+    Redeploy["수정·재배포 확인 · 자원 정리"]
 
     D4 --> D5
     D8 --> Check
     Check -->|보완 필요| Improve --> D8
-    Check -->|충족| Apply
+    Check -->|충족| Web --> Deploy --> Verify
+    Verify -->|아니오| Retry --> Deploy
+    Verify -->|예| Redeploy --> Apply
 
     classDef step fill:#eaf6f0,stroke:#15745b,color:#162b46
     classDef gate fill:#fbf4e7,stroke:#926020,color:#162b46
     classDef result fill:#edf3ff,stroke:#285bd4,color:#162b46
-    class D1,D2,D3,D4,D5,D6,D7,D8,Improve step
-    class Check gate
+    class D1,D2,D3,D4,D5,D6,D7,D8,Improve,Web,Deploy,Retry,Redeploy step
+    class Check,Verify gate
     class Apply result
 ```
+
+추가 과정: [Azure 배포 캡스톤](09-azure-capstone/README.md) ·
+[직군별 웹 결과물 레시피](09-azure-capstone/roles.md) · [강사 준비](09-azure-capstone/instructor.md).
+정적 웹이 공통 기본이며, Python 서버 실행은 [선택 심화](09-azure-capstone/server-app.md)입니다.
+기존 2일 교육은 유지하고 추가 시간은 리허설 후 확정합니다.
 
 ---
 
@@ -179,6 +191,12 @@ GitHub Copilot은 "코드 자동완성 도구"로 알려져 있지만, 실제로
 | 6 | 재무 / 회계 | [06-finance](./06-finance/) | 엑셀 수식/VBA, 재무 리포트, 월결산 자동화 |
 | 7 | 일반 오피스 워커 | [07-office-worker](./07-office-worker/) | 이메일, PPT 초안, 반복 업무 매크로 |
 | 8 | 데이터 분석가 (비개발) | [08-data-analyst](./08-data-analyst/) | SQL, pandas 기초, 시각화, 대시보드 스펙 |
+
+### Step 2. Azure 배포 캡스톤
+
+[09-azure-capstone/](09-azure-capstone/README.md)에서 자기 직군의 결과물을 웹으로 완성하고,
+**URL 접속 → 핵심 기능 사용 → 수정·재배포 → 자원 정리**까지 진행합니다.
+Copilot CLI·Azure 계정·배포 도구는 별도 준비가 필요하며, Track 4 수강은 필수가 아닙니다.
 
 ---
 

@@ -1,5 +1,7 @@
 # 마케터용 Copilot 프롬프트 치트시트
 
+**Azure 확장:** [직군별 웹 변환 프롬프트](../09-azure-capstone/roles.md) · [계획·배포·재배포 프롬프트](../09-azure-capstone/README.md).
+
 > **사용 방법**: Copilot Chat 사이드바(`Ctrl+Alt+I`)에 복붙 후, `[대괄호]` 안의 내용을 교체하세요.
 > BAD vs GOOD 비교를 통해 프롬프트 감각을 익혀보세요.
 

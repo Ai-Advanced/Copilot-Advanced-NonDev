@@ -1,5 +1,7 @@
 # 재무 / 회계팀을 위한 GitHub Copilot 2일 심화 과정
 
+**과정 후 추가 실습:** [Copilot CLI로 가상 결산 보고서를 Azure에 배포](../09-azure-capstone/README.md) · [직군별 요구사항](../09-azure-capstone/roles.md). 기존 2일 과정 외 별도 편성입니다.
+
 > **대상**: 재무팀, 회계팀, FP&A, 세무 담당자, 경영관리 담당자
 > **기간**: 2일 (각 3~4시간, 총 6~8시간)
 > **선행 조건**: [00-basics/](../00-basics/) 5개 문서 완료 필수

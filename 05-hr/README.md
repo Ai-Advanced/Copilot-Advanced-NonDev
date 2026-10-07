@@ -1,5 +1,7 @@
 # HR / 인사 — GitHub Copilot 2일 심화 과정
 
+**과정 후 추가 실습:** [Copilot CLI로 가상 채용·온보딩 안내를 Azure에 배포](../09-azure-capstone/README.md) · [직군별 요구사항](../09-azure-capstone/roles.md). 기존 2일 과정 외 별도 편성입니다.
+
 > **대상**: HRBP, 리크루터, 피플옵스, 조직문화 담당자
 > **수준**: 00-basics/ 완료 후 진행
 > **총 소요**: 6~8시간 (Day 1: 3~4시간 · Day 2: 3~4시간)

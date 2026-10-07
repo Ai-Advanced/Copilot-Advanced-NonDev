@@ -1,5 +1,7 @@
 # 마케터를 위한 GitHub Copilot 2일 심화 과정
 
+**과정 후 추가 실습:** [Copilot CLI로 랜딩 페이지를 Azure에 배포](../09-azure-capstone/README.md) · [직군별 요구사항](../09-azure-capstone/roles.md). 기존 2일 과정 외 별도 편성입니다.
+
 > **대상**: 디지털 마케터 · 퍼포먼스 마케터 · 그로스 해커 · 콘텐츠 마케터
 > **선행 조건**: `00-basics/` 5개 문서 완료
 > **총 시간**: 6~8시간 (Day 1: 3~4시간 / Day 2: 3~4시간)

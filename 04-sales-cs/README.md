@@ -1,5 +1,7 @@
 # 영업 / CS — GitHub Copilot 2일 심화 과정
 
+**과정 후 추가 실습:** [Copilot CLI로 FAQ·견적 도구를 Azure에 배포](../09-azure-capstone/README.md) · [직군별 요구사항](../09-azure-capstone/roles.md). 기존 2일 과정 외 별도 편성입니다.
+
 > **대상**: B2B 영업 담당자, 인사이드 세일즈, CS/CX 팀, 고객 성공(Customer Success) 담당자
 > **전제 조건**: `00-basics/` 5개 문서 완료
 > **총 소요 시간**: Day 1 (3~4시간) + Day 2 (3~4시간) = 6~8시간

@@ -43,3 +43,7 @@ venv/
 learners/
 my-*
 practice-output/
+
+# Azure capstone local settings and upload packages
+09-azure-capstone/*.local.json
+09-azure-capstone/*.zip

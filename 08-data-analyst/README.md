@@ -1,5 +1,7 @@
 # 08. 데이터 분석가 (비개발) — GitHub Copilot 2일 심화 과정
 
+**과정 후 추가 실습:** [Copilot CLI로 가상 데이터 대시보드를 Azure에 배포](../09-azure-capstone/README.md) · [직군별 요구사항](../09-azure-capstone/roles.md). 기존 2일 과정 외 별도 편성입니다.
+
 > **대상**: BI 분석가 · 비즈니스 분석가 · 그로스 분석가 · 프로덕트 분석가
 > SQL은 쓸 줄 알지만 Python은 부담스러운 분析가, 반복 SQL/pandas 작업을 절반으로 줄이고 싶은 분析가.
 >
